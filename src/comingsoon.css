@@ -139,6 +139,13 @@ html, body, #root {
   font-size: 15px;
   margin-top: 12px;
 }
+.social-proof img {
+  width: 48px;      /* reduce size */
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 
 /* ================================
    MOBILE REFINEMENT
