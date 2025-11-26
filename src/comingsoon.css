@@ -1,0 +1,312 @@
+/* ================================
+   GLOBAL RESET
+   ================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background: #ffffff !important;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================================
+   PAGE LAYOUT
+   ================================ */
+.cs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+
+  /* better breathing room on mobile */
+  padding-top: 100px;
+}
+
+/* ================================
+   FLOATING PHONE MOCKUP
+   ================================ */
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.phone {
+  width: 360px;
+  max-width: 90vw;
+  filter: drop-shadow(0px 24px 48px rgba(0, 0, 0, 0.18));
+}
+
+/* FLOATING ANIMATION */
+.floating {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ================================
+   TEXT
+   ================================ */
+.coming-soon-label {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #6d6d6d;
+  text-transform: uppercase;
+}
+
+.headline {
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 18px;
+  max-width: 680px;
+}
+
+.subheadline {
+  max-width: 540px;
+  margin: 0 auto 36px auto;
+  font-size: 18px;
+  color: #444;
+}
+
+/* ================================
+   EMAIL FORM
+   ================================ */
+.email-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.email-box input {
+  width: 260px;
+  padding: 16px 20px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+}
+
+.email-box input:focus {
+  border-color: #7c00ff;
+}
+
+.email-box button {
+  background: #7c00ff;
+  color: #fff;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.2s ease;
+}
+
+.email-box button:hover {
+  background: #6900db;
+}
+
+/* ================================
+   SOCIAL PROOF
+   ================================ */
+.social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #555;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+/* ================================
+   MOBILE REFINEMENT
+   ================================ */
+@media (max-width: 600px) {
+  
+  .cs-container {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .headline {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    padding: 0 10px;
+  }
+
+  .subheadline {
+    font-size: 16px;
+    margin-bottom: 32px;
+    padding: 0 12px;
+  }
+
+  .coming-soon-label {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .phone {
+    width: 300px;
+    max-width: 80vw;
+    margin-bottom: 28px;
+  }
+
+  .email-box {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+  }
+
+  .email-box button {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+/* Narrow screens like iPhone SE */
+@media (max-width: 375px) {
+  .headline {
+    font-size: 26px;
+  }
+
+  .phone {
+    width: 260px;
+  }
+}
+
+/* Foldable / ultra-narrow devices */
+@media (max-width: 330px) {
+  .email-box input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .headline {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .subheadline {
+    font-size: 16px;
+  }
+
+  .coming-soon-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+}
+
+/* ================================
+   SUCCESS BANNER
+   ================================ */
+.success-banner {
+  background: #e9f8f1;
+  color: #137547;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   LOADING SPINNER
+   ================================ */
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ================
+   TYPOGRAPHY (Framer-level)
+   ================ */
+
+.coming-soon-label {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #6d6d6d;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.headline {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.18;
+  color: #111;
+  margin-bottom: 18px;
+  max-width: 680px;
+}
+
+.subheadline {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #444;
+  margin: 0 auto 36px auto;
+  max-width: 540px;
+}
+
+.email-box input {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.email-box button {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+
+.social-proof {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #555;
+}
+
