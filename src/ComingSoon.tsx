@@ -86,7 +86,7 @@ export default function ComingSoon() {
 
       {/* Social Proof */}
       <div className="social-proof">
-        <img src="/goal.png" alt="Early Users" />
+        <img src="/Send_money3.png" alt="Early Users" />
         <span>3.5k people signed up</span>
       </div>
     </div>
