@@ -15,7 +15,7 @@ export default function ComingSoon() {
       await fetch("https://api.sheetbest.com/sheets/2972f664-a8dd-4bba-9ffe-da0229bdc9d4", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ Email: email }),
+        body: JSON.stringify({ email }),
       });
 
       setSuccess(true);
